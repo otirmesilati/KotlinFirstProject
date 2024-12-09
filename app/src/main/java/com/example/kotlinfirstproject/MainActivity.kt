@@ -1,5 +1,6 @@
 package com.example.kotlinfirstproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
@@ -27,6 +28,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val myIntent = Intent(this.MainActivity2.class)
+        startActivity(myIntent)
+
         val btnHello = findViewById<Button>(R.id.btnHello)
         val txtHello = findViewById<TextView>(R.id.txtHello)
         val edtTxtName = findViewById<EditText>(R.id.edtTxtName)
